@@ -88,26 +88,27 @@ Une fois que l'installation est terminée, lancez l'exécutable. Vous devriez to
 
 ![](ressources/complete_installation.png)
 
-À partir de là vous allez tomber sur la partie de personnalisation de votre installation pour qu'elle corresponde à vos besoins. Sur l'aspect esthétique, choisissez ce qui vous convient le mieux. En ce qui concerne les différents plugins à intégrer, à priori, les options installées par défaut sont suffisantes, donc vous choisirez l'installation par défaut.
-
-À la fin, vous allez saisir vos données de connexion pour activer la licence et pour terminer le paramétrage de votre IDE :
+Ensuite vous devriez saisir vos données de connexion pour activer la licence :
 
 ![](ressources/Licence_IDE.png)
 
+À partir de là vous allez tomber sur la fenêtre de démarrage de l'IDE :
+
+![](ressources/Fenetre_principale_IDE.png)
+
+Ici, si vous souhaitez, vous pouvez personnaliser votre installation (menu _Customize_) -- choisissez ce qui vous convient le mieux.
+
+
 **Import du projet dans l'IDE**
 
-Une fois arrivé sur la fenêtre de démarrage de l'IDE, vous devez choisir comment vous souhaitez démarrer le travail. Pour commencer votre TP, il faut cloner votre dépôt Git, vous choisirez donc l'option *Get from VCS*, ou _VCS_ signifie _Version Control_ :
+Maintenant, depuis l'onglet _Projects_ vous devez choisir comment vous souhaitez démarrer le travail. Dans notre cas il faut cloner votre dépôt Git, vous choisirez donc l'option *Get from VCS*, ou _VCS_ signifie _Version Control_. L'url sera celle correspondant à votre fork du TP2 sur GitHub (`https://github.com/IUTInfoMontp-M2103/tp2-choucroutegarnie` si votre login est _choucroutegarnie_) :
 
-![](ressources/ImportProjet1.png)
-
-Le repository sera celui correspondant à votre TP sur GitHub :
-
-![](ressources/ImportProjet1.png)
+![](ressources/ImportProjet.png)
 
 Sur certaines machines, au lancement du projet, il se peut que l'IDE vous demande d'indiquer le SDK à utiliser (grosso modo c'est l'ensemble d'outils logiciels qui permettent de faire tourner des programmes Java). Vous pouvez choisir le SDK 1.11, mais 1.8 fera également l'affaire.
 Lorsque vous ouvrez votre projet Java, la fenêtre d'affichage de votre IDE devrait rassembler à quelque chose comme ceci :
 
-![](ressources/FenetreIDE.png)
+![](ressources/Fenetre_projet_IDE.png)
 
 Prenez quelques minutes pour observer l'interface utilisateur. Les éléments principaux :
 * à gauche : l'arborescence de votre projet Java
