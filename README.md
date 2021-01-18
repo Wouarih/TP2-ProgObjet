@@ -22,7 +22,7 @@
 ## TP 2 : Prise en main de l'IDE et travail en mode TDD
 Pendant les TP nous vous conseillons d'utiliser un environnement de développement intégré (IDE en anglais).
 Les avantages sont multiples : le refactoring du code, l'auto-complétion, la suggestion des méthodes/attributs/classes,
-la documentation intégrée, le debuggage, une bonne intégration de Git et GitHub, des tests unitaires etc.
+la documentation intégrée, le debuggage, une bonne intégration de Git et GitHub, des tests unitaires, etc.
 Dans ce cours nous utiliserons l'IDE **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** de chez **[JetBrains](https://www.jetbrains.com)**,
 installé sur les machines du département. Il devrait vous faciliter la vie au quotidien dans la réalisation de vos TP.
 Bien évidement, rien ne vous empêche d'en utiliser un autre ([Eclipse](https://www.eclipse.org/), [NetBeans](https://netbeans.org/) etc.).
@@ -101,11 +101,26 @@ Ici, si vous souhaitez, vous pouvez personnaliser votre installation (menu _Cust
 
 **Import du projet dans l'IDE**
 
-Maintenant, depuis l'onglet _Projects_ vous devez choisir comment vous souhaitez démarrer le travail. Dans notre cas il faut cloner votre dépôt Git, vous choisirez donc l'option *Get from VCS*, ou _VCS_ signifie _Version Control_. L'url sera celle correspondant à votre fork du TP2 sur GitHub (`https://github.com/IUTInfoMontp-M2103/tp2-choucroutegarnie` si votre login est _choucroutegarnie_) :
+Maintenant, depuis l'onglet _Projects_ vous devez choisir comment vous souhaitez démarrer le travail.
+Dans notre cas il faut cloner votre dépôt Git, vous choisirez donc l'option *Get from VCS*, ou _VCS_ signifie _Version Control_.
+L'URL sera celui correspondant à votre fork du TP2 sur GitHub :
 
 ![](ressources/ImportProjet.png)
 
-Sur certaines machines, au lancement du projet, il se peut que l'IDE vous demande d'indiquer le SDK à utiliser (grosso modo c'est l'ensemble d'outils logiciels qui permettent de faire tourner des programmes Java). Vous pouvez choisir le SDK 1.11, mais 1.8 fera également l'affaire.
+Rappelez-vous que votre fork du TP2 est privé, donc une authentification est nécessaire :
+
+![](ressources/Login_GitHub_Idea.png)
+
+Le plus simple est de générer un _token_ d'authentification avec HTTPS, qui vous permettra de cloner avec l'IDE tous
+vos projets GitHub à partir de leur URL et sans avoir à vous authentifier à chaque. Pour cela cliquez sur _Use token_ et dans la fenêtre ci-dessous cliquez sur _Generate_ :
+
+![](ressources/Generation_token_github.png)
+
+Vous allez être redirigé vers la page GitHub correspondante ou vous générerez le token avec bouton _Generate token_ tout en bas de la page
+(vous pouvez laisser les options cochées proposées telles qu'elles).
+Copiez le code obtenu et insérez-le dans la fenêtre ci-dessus. Cliquez sur _Log In_ et vous venez de cloner avec l'IDE
+votre premier dépôt GitHub tout en établissant un canal de communication sécurisé **permanent** entre l'IDE et GitHub.
+
 Lorsque vous ouvrez votre projet Java, la fenêtre d'affichage de votre IDE devrait rassembler à quelque chose comme ceci :
 
 ![](ressources/Fenetre_projet_IDE.png)
@@ -114,6 +129,13 @@ Prenez quelques minutes pour observer l'interface utilisateur. Les éléments pr
 * à gauche : l'arborescence de votre projet Java
 * centre-droite : la fenêtre d'édition où vous allez taper vos programmes
 * en bas : le terminal où seront affichés les messages concernant l'exécution de vos programmes
+
+Sur certaines machines, au lancement du projet, sur cette fenêtre il se peut que l'IDE vous demande d'indiquer le SDK à utiliser
+(grosso modo c'est l'ensemble d'outils logiciels qui permettent de faire tourner des programmes Java) :
+
+![](ressources/SDK_non_detected.png)
+
+Si vous avez ce problème, cliquez sur _SetUp SDK_ et choisissez celui par défaut ou tout autre version supérieure à 1.8.
 
 
 ### Workflow
@@ -132,7 +154,7 @@ Ci-dessous le déroulement d’un cycle :
 doit s’écrire avant la fonctionnalité voulue, il est donc censé échouer initialement (normal, car vous n'avez encore rien programmé).
 2. Écrire le code __minimal__ suffisant pour passer le test (principe _BabySteps_).
 3. Vérifier que le test passe.
-4. __Réfactoriser__ (simplifier, améliorer, optimiser etc.) tout le code tout en gardant la fonctionnalité. Durant cette étape les tests écrits préalablement sont exécutés en permanence pour certifier la validité des changements.
+4. __Refactoriser__ (simplifier, améliorer, optimiser, etc.) tout le code tout en gardant la fonctionnalité. Durant cette étape les tests écrits préalablement sont exécutés en permanence pour certifier la validité des changements.
 
 
 Ce workflow se décrit par le triptyque "RED, GREEN, REFACTOR" dans le schéma suivant :
@@ -179,7 +201,7 @@ Ainsi le code est organisé de la façon suivante :
 ![](ressources/ArborescenceMaven.png)
 * l'intégralité des sources du projet se trouve dans le répertoire `src/`
 * le code source et fichiers source principaux se trouvent dans `src/main`
-* tous les fichiers de tests sont dans dans `src/test`
+* tous les fichiers de tests sont dans `src/test`
 
 ![](ressources/ArborescenceMavenDetail.png)
 * le code source (ou code applicatif) se trouve dans `src/main/java`
@@ -203,7 +225,7 @@ passer__ (pas de messages en rouge dans la console de l'IDE).
 ### Exercice 1 : Fizz Buzz !
 
 Le kata Fizz Buzz est un des katas les plus connus pour l'apprentissage du TDD.
-Une série 'FizzBuzz' de taille `n` est une suite d'entiers positifs où, lorsqu'un multiple de 3 est rencontré on imprime "Fizz", et lorsqu'un multiple de 5 est renctontré on imprime "Buzz". Voici la série FizzBuzz de taille 20 :
+Une série 'FizzBuzz' de taille `n` est une suite d'entiers positifs où, lorsqu'un multiple de 3 est rencontré on imprime "Fizz", et lorsqu'un multiple de 5 est rencontré on imprime "Buzz". Voici la série FizzBuzz de taille 20 :
 
 1 ; 2 ; Fizz ; 4 ; Buzz ; Fizz ; 7 ; 8 ; Fizz ; Buzz ; 11 ; Fizz ; 13 ; 14 ; FizzBuzz ; 16 ; 17 ; Fizz ; 19 ; Buzz
 
@@ -216,7 +238,7 @@ Vous activerez les tests les uns après les autres et soumettrez (avec un commit
 
 La classe principale (contenant le `main`) est la classe `App`, et se trouve dans le paquetage `fr.umontpellier.iut.exercice1`. Implémentez-la (supprimez la ligne qui lève une exception) pour simuler le bon fonctionnement de votre programme.
 
-Même si l'exercice paraît facile, prêtez une attention particulière à l'étape de réfactorisation. Vous vous servirez de votre IDE pour renommer les méthodes ou variables, pour l'autocomplétion etc.
+Même si l'exercice paraît facile, prêtez une attention particulière à l'étape de refactorisation. Vous vous servirez de votre IDE pour renommer les méthodes ou variables, pour l'autocomplétion, etc.
 
 
 
@@ -228,7 +250,7 @@ Par exemple pour l'entier 5, la liste retournée devrait être [5], alors que po
 
 La méthode que vous devez implémenter est `computeFactors(int)`. Elle est située dans la classe `PrimeFactors` (paquetage `fr.umontpellier.iut.exercice2`) qui renvoie la liste de facteurs premiers pour l'entier passé en paramètre.
 
-Comme pour l'exercice précédent, vous activerez les tests les uns après les autres.  N'oubliez pas de __refactoriser__ (i.e. simplifier/nettoyer/factoriser) le code à chaque étape. Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
+Comme pour l'exercice précédent, vous activerez les tests les uns après les autres. N'oubliez pas de __refactoriser__ (c.à.d. simplifier/nettoyer/factoriser) le code à chaque étape. Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
 
 À la fin de l'exercice, pour vous convaincre de la validité de votre code, vous ajouterez deux-trois tests supplémentaires pour deux nombres que vous aurez choisis aléatoirement (par exemple, dans un terminal avec la commande `echo $RANDOM`). Est-ce que votre programme passe ce nouveau test ?
 
@@ -350,3 +372,10 @@ Pour cela placez-vous à la racine de votre projet et tapez la commande suivante
 Le résultat obtenu devrait rassembler à quelque chose comme ceci :
 
 ![](ressources/mvn_test_exemple.png)
+
+L'exécution de la classe principale avec Maven depuis la ligne de commande est également plus simple que la méthode "rudimentaire" avec `javac` + `java`
+ :
+
+```
+~/POO/TP2$ mvn exec:java -Dexec.mainClass="fr.umontpellier.iut.exercice1.App"
+```
