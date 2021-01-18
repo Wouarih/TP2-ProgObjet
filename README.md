@@ -33,19 +33,12 @@ https://classroom.github.com/a/bfBd4j6U
 
 Contrairement au TP1, ne clonez pas tout de suite ce fork localement sur votre machine, l'IDE s'en chargera tout seul (cf. ci-dessous).
 
-### Découverte et prise en main de l'IDE
-
+### Premiers pas avec l'IDE
 
 IntelliJ IDEA possède deux versions, la première dite *'communautaire'* est totalement open source et peut être utilisée 
 gratuitement par n'importe qui et la seconde dite *'ultimate'* qui est plus riche en fonctionnalités et qui n'est pas 
 gratuite. Pour les TPs qui vont suivre, vous aurez besoin de la version *'ultimate'* et par chance, comme dans le cas de GitHub, en tant qu'étudiant, vous avez la 
-possibilité de pouvoir bénéficier d'une licence pour tous les produits JetBrains. Pour bénéficier de cette remise, il 
-vous suffit de remplir [ce formulaire](https://www.jetbrains.com/shop/eform/students).
-
-Quelques minutes après, vous recevrez un email de confirmation suivi d'un second email d'activation où vous devrez accepter 
-les conditions d'utilisation et choisir un nom d'utilisateur et un mot de passe. Conservez précieusement ces 
-informations dans un coin identifié de votre cerveau car c'est grâce à elles que vous pourrez importer votre licence 
-sur toutes les machines que vous allez utiliser (chez vous, à l'IUT etc).
+possibilité de pouvoir bénéficier d'une licence pour tous les produits JetBrains.
 
 **Installation et premier lancement de l'IDE**
 
@@ -55,8 +48,15 @@ sur toutes les machines que vous allez utiliser (chez vous, à l'IUT etc).
 /opt/ide-Ultimate/bin$  ./idea.sh
 ```
 -->
+Sur Ubuntu le plus simple c'est d'utiliser _Snap_ qui est un système de distribution de logiciels simplifié et qui est pré-installé sur toutes les versions récentes d'Ubuntu. À partir d'un terminal tapez :
 
-Commencez par télécharger la version *'ultimate'* de [IntelliJ IDEA](https://www.jetbrains.com/fr-fr/idea/). Le téléchargement de `idea-IU-***` risque de prendre un peu de temps, donc en attendant vous pouvez vous familiariser avec les consignes qui suivent.
+```
+sudo snap install intellij-idea-ultimate --classic
+```
+
+Le téléchargement et l'installation risquent de prendre un peu de temps, donc en attendant vous pouvez demander la licence et vous familiariser avec les consignes qui suivent.
+
+<!-- Commencez par télécharger la version *'ultimate'* de [IntelliJ IDEA](https://www.jetbrains.com/fr-fr/idea/).
 
 Pour installer l'IDE sur Linux, vous devez extraire l'archive dans un endroit qui va bien (dans votre `$HOME` par exemple) et lancer l'exécutable se trouvant dans le répertoire `idea-IU-***.tar.gz/bin/`. Depuis un terminal :
 
@@ -69,11 +69,22 @@ cd ~/idea-IU-***/bin/
 
 ./idea.sh
 ```
+-->
 
-Pour installer l'IDE sur Windows, vous devez tout simplement lancer l'exécutable que vous avez téléchargé et suivre les étapes suivantes.
+Pour installer l'IDE directement à partir du code source ou sur Windows, ou Mac OS, vous pouvez suivre les indications ici : https://www.jetbrains.com/help/idea/installation-guide.html#standalone
 
+**Obtention de la licence académique Ultimate**
 
-Après le chargement, vous devriez tomber sur une première fenêtre vous proposant d'importer vos paramètres. Vous pouvez laisser sur 'Do not import settings' et valider :
+Pour bénéficier de la licence académique, il vous suffit de remplir [ce formulaire](https://www.jetbrains.com/shop/eform/students).
+
+Quelques minutes après, vous recevrez un email de confirmation suivi d'un second email d'activation où vous devrez accepter 
+les conditions d'utilisation et choisir un nom d'utilisateur et un mot de passe. Conservez précieusement ces 
+informations dans un coin identifié de votre cerveau car c'est grâce à elles que vous pourrez importer votre licence 
+sur toutes les machines que vous allez utiliser (chez vous, à l'IUT etc).
+
+**Premier lancement de l'IDE**
+
+Une fois que l'installation est terminée, lancez l'exécutable. Vous devriez tomber sur une première fenêtre vous proposant d'importer vos paramètres. Vous pouvez laisser sur 'Do not import settings' et valider :
 
 ![](ressources/complete_installation.png)
 
@@ -179,12 +190,12 @@ Maven est un system de _build_ et administration de projets Java. Pour faire une
 à l'outil bien connu [make](https://fr.wikipedia.org/wiki/Make) avec lequel vous serez bercés tout au long de vos études.
 Utiliser Maven permet de gérer facilement toutes les dépendances du projet (comme les librairies de tests unitaires par exemple).
 Il est également utile pour créer le fichier `.jar` du projet : une archive contenant l'ensemble de classes Java et de ressources
- d'un projet informatique (comme `.AppImage` sous Linux ou `.exe` sous Windows).   
+ d'un projet informatique (comme `.AppImage` sous Linux ou `.exe` sous Windows).
 
 Comme indiqué précédemment, dans ce TP les tests unitaires vous seront donnés dans le repertoire de test correspondant.
 Vous allez les activer un par un en commentant l'annotation `@Disabled`.
 
-__La règle principale à retenir__ : avant de faire un commit tous les tests qui ne sont pas annotés avec `@Disabled` __doivent
+__La règle principale à retenir__ : avant de faire un commit, tous les tests qui ne sont pas annotés avec `@Disabled` __doivent
 passer__ (pas de messages en rouge dans la console de l'IDE).
 
 
