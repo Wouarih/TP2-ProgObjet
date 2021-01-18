@@ -1,14 +1,15 @@
-# ![](ressources/logo.jpeg) Bases de la programmation orientée objet
+# ![](ressources/logo.jpeg)
+
+# Bases de la programmation orientée objet 
 
 ### IUT Montpellier-Sète – Département Informatique
 
 * **Cours:** [M2103](http://cache.media.enseignementsup-recherche.gouv.fr/file/25/09/7/PPN_INFORMATIQUE_256097.pdf) - support [ici](https://github.com/IUTInfoMontp-M2103/Ressources)
-* **Enseignants:** [Marin Bougeret](mailto:marin.bougeret@umontpellier.fr), [Sébastien Gagné](mailto:sebastien.gagne@umontpellier.fr), [Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr), [Jérôme Palaysi](mailto:jerome.palaysi@umontpellier.fr), [Victor Poupet](mailto:victor.poupet@umontpellier.fr), [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-* Le [forum Piazza](https://piazza.com/class/k52c8w685w3210) de ce cours pour poser vos questions
+* **Enseignants:** [Marin Bougeret](mailto:marin.bougeret@umontpellier.fr), [Romain Lebreton](mailto:romain.lebreton@umontpellier.fr), [Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr), [Victor Poupet](mailto:victor.poupet@umontpellier.fr), [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
+* Le [forum Piazza](https://piazza.com/class/kjifrxy1n0i3xa) de ce cours pour poser vos questions
 * [Email](mailto:petru.valicov@umontpellier.fr) pour une question d'ordre privée concernant le cours.
 
-
-Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'espace de stockage autorisé :
+<!--Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'espace de stockage autorisé :
 
 * placez-vous dans votre `$HOME` et utilisez les commandes suivantes :
     * `du -sh` pour voir combien d'espace vous avez déjà utilisé
@@ -16,6 +17,7 @@ Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'es
     * `du -sch .[!.]* *` pour voir combien d'espace vous avez déjà utilisé pour chaque fichier, y compris les fichiers cachés
 * Supprimez les fichiers inutiles.
 * Pour évitez des problèmes durant vos TPs d'informatique, vous devriez toujours **garder 300-400 Mo d'espace libre**.
+-->
 
 ## TP 2 : Prise en main de l'IDE et travail en mode TDD
 Pendant les TP nous vous conseillons d'utiliser un environnement de développement intégré (IDE en anglais).
@@ -27,9 +29,9 @@ Bien évidement, rien ne vous empêche d'en utiliser un autre ([Eclipse](https:/
 
 D'abord, et comme pour tous les tps de POO qui vont suivre, vous allez forker ce dépôt pour pouvoir commencer à travailler localement :
 
-https://classroom.github.com/a/t3W9h14X
+https://classroom.github.com/a/bfBd4j6U
 
-Contrairement au TP1, ne clonez pas tout de suite vous même ce fork, l'IDE s'en chargera tout seul (cf. ci-dessous).
+Contrairement au TP1, ne clonez pas tout de suite ce fork localement sur votre machine, l'IDE s'en chargera tout seul (cf. ci-dessous).
 
 ### Découverte et prise en main de l'IDE
 
@@ -43,15 +45,33 @@ vous suffit de remplir [ce formulaire](https://www.jetbrains.com/shop/eform/stud
 Quelques minutes après, vous recevrez un email de confirmation suivi d'un second email d'activation où vous devrez accepter 
 les conditions d'utilisation et choisir un nom d'utilisateur et un mot de passe. Conservez précieusement ces 
 informations dans un coin identifié de votre cerveau car c'est grâce à elles que vous pourrez importer votre licence 
-chez vous et dans les salles de TP.
+sur toutes les machines que vous allez utiliser (chez vous, à l'IUT etc).
 
-**Premier lancement de l'IDE**
+**Installation et premier lancement de l'IDE**
 
-Sur les postes Linux du département informatique de l'IUT de Montpellier, IntelliJ IDEA Ultimate est installé dans `/opt/ide-Ultimate/` :
+<!-- Sur les postes Linux du département informatique de l'IUT de Montpellier, IntelliJ IDEA Ultimate est installé dans `/opt/ide-Ultimate/` :
 ```
 ~/RepertoireCourant$  cd /opt/ide-Ultimate/bin
 /opt/ide-Ultimate/bin$  ./idea.sh
 ```
+-->
+
+Commencez par télécharger la version *'ultimate'* de [IntelliJ IDEA](https://www.jetbrains.com/fr-fr/idea/). Le téléchargement de `idea-IU-***` risque de prendre un peu de temps, donc en attendant vous pouvez vous familiariser avec les consignes qui suivent.
+
+Pour installer l'IDE sur Linux, vous devez extraire l'archive dans un endroit qui va bien (dans votre `$HOME` par exemple) et lancer l'exécutable se trouvant dans le répertoire `idea-IU-***.tar.gz/bin/`. Depuis un terminal :
+
+```
+cd repertoire_contenant_l_archive_que_vous_venez_de_telecharger
+
+tar -zxvf ideaIU-***.tar.gz --directory ~/
+
+cd ~/idea-IU-***/bin/
+
+./idea.sh
+```
+
+Pour installer l'IDE sur Windows, vous devez tout simplement lancer l'exécutable que vous avez téléchargé et suivre les étapes suivantes.
+
 
 Après le chargement, vous devriez tomber sur une première fenêtre vous proposant d'importer vos paramètres. Vous pouvez laisser sur 'Do not import settings' et valider :
 
@@ -59,17 +79,19 @@ Après le chargement, vous devriez tomber sur une première fenêtre vous propos
 
 À partir de là vous allez tomber sur la partie de personnalisation de votre installation pour qu'elle corresponde à vos besoins. Sur l'aspect esthétique, choisissez ce qui vous convient le mieux. En ce qui concerne les différents plugins à intégrer, à priori, les options installées par défaut sont suffisantes, donc vous choisirez l'installation par défaut.
 
-À la fin, vous allez saisir vos données de connexion pour activer la licence et pour terminer le paramétrage de votre IDE.
+À la fin, vous allez saisir vos données de connexion pour activer la licence et pour terminer le paramétrage de votre IDE :
+
+![](ressources/Licence_IDE.png)
 
 **Import du projet dans l'IDE**
 
-Une fois arrivé sur la fenêtre de démarrage de l'IDE, vous devez choisir comment vous souhaitez démarrer le travail. Pour commencer votre TP, il faut cloner votre dépôt Git, vous choisirez donc l'option *Get from Version Control* :
+Une fois arrivé sur la fenêtre de démarrage de l'IDE, vous devez choisir comment vous souhaitez démarrer le travail. Pour commencer votre TP, il faut cloner votre dépôt Git, vous choisirez donc l'option *Get from VCS*, ou _VCS_ signifie _Version Control_ :
 
-![](ressources/ImportProjet.png)
+![](ressources/ImportProjet1.png)
 
 Le repository sera celui correspondant à votre TP sur GitHub :
 
-![](ressources/CloneGitHub.png)
+![](ressources/ImportProjet1.png)
 
 Sur certaines machines, au lancement du projet, il se peut que l'IDE vous demande d'indiquer le SDK à utiliser (grosso modo c'est l'ensemble d'outils logiciels qui permettent de faire tourner des programmes Java). Vous pouvez choisir le SDK 1.11, mais 1.8 fera également l'affaire.
 Lorsque vous ouvrez votre projet Java, la fenêtre d'affichage de votre IDE devrait rassembler à quelque chose comme ceci :
