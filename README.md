@@ -84,7 +84,8 @@ sur toutes les machines que vous allez utiliser (chez vous, à l'IUT etc).
 
 **Premier lancement de l'IDE**
 
-Une fois que l'installation est terminée, lancez l'exécutable. Vous devriez tomber sur une première fenêtre vous proposant d'importer vos paramètres. Vous pouvez laisser sur 'Do not import settings' et valider :
+Une fois que l'installation est terminée, lancez l'exécutable. Vous devriez tomber sur une première fenêtre vous proposant d'importer vos paramètres.
+Normalement, vous n'avez rien à importer :
 
 ![](ressources/complete_installation.png)
 
@@ -92,12 +93,13 @@ Ensuite vous devriez saisir vos données de connexion pour activer la licence :
 
 ![](ressources/Licence_IDE.png)
 
-À partir de là vous allez tomber sur la fenêtre de démarrage de l'IDE :
+Votre licence académique est désormais active sur votre machine. Normalement vous devriez arriver sur la fenêtre de démarrage de l'IDE :
 
 ![](ressources/Fenetre_principale_IDE.png)
 
 Ici, si vous souhaitez, vous pouvez personnaliser votre installation (menu _Customize_) -- choisissez ce qui vous convient le mieux.
 
+Vous êtes presque prêt à commencer à coder !
 
 **Import du projet dans l'IDE**
 
@@ -116,10 +118,10 @@ vos projets GitHub à partir de leur URL et sans avoir à vous authentifier à c
 
 ![](ressources/Generation_token_github.png)
 
-Vous allez être redirigé vers la page GitHub correspondante ou vous générerez le token avec bouton _Generate token_ tout en bas de la page
+Vous allez être redirigé vers la page GitHub correspondante ou vous générerez le token avec le bouton _Generate token_ tout en bas de la page
 (vous pouvez laisser les options cochées proposées telles qu'elles).
-Copiez le code obtenu et insérez-le dans la fenêtre ci-dessus. Cliquez sur _Log In_ et vous venez de cloner avec l'IDE
-votre premier dépôt GitHub tout en établissant un canal de communication sécurisé **permanent** entre l'IDE et GitHub.
+Copiez le code obtenu et insérez-le dans la fenêtre ci-dessus. Cliquez sur _Log In_ et normalement tout est bon.
+Vous venez de cloner avec l'IDE votre premier dépôt GitHub tout en établissant un canal de communication sécurisé **permanent** entre l'IDE et GitHub.
 
 Lorsque vous ouvrez votre projet Java, la fenêtre d'affichage de votre IDE devrait rassembler à quelque chose comme ceci :
 
@@ -130,12 +132,12 @@ Prenez quelques minutes pour observer l'interface utilisateur. Les éléments pr
 * centre-droite : la fenêtre d'édition où vous allez taper vos programmes
 * en bas : le terminal où seront affichés les messages concernant l'exécution de vos programmes
 
-Sur certaines machines, au lancement du projet, sur cette fenêtre il se peut que l'IDE vous demande d'indiquer le SDK à utiliser
-(grosso modo c'est l'ensemble d'outils logiciels qui permettent de faire tourner des programmes Java) :
+Sur certaines machines, au premier lancement du projet et à l'ouverture d'une classe Java, il se peut que l'IDE
+vous demande d'indiquer le SDK à utiliser (grosso modo c'est l'ensemble d'outils logiciels qui permettent de faire tourner des programmes Java) :
 
 ![](ressources/SDK_non_detected.png)
 
-Si vous avez ce problème, cliquez sur _SetUp SDK_ et choisissez celui par défaut ou tout autre version supérieure à 1.8.
+Si vous avez ce problème, cliquez sur _SetUp SDK_ et choisissez celui par défaut ou une autre version supérieure à 1.8.
 
 
 ### Workflow
