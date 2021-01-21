@@ -27,11 +27,11 @@ Dans ce cours nous utiliserons l'IDE **[IntelliJ IDEA](https://www.jetbrains.com
 installé sur les machines du département. Il devrait vous faciliter la vie au quotidien dans la réalisation de vos TP.
 Bien évidement, rien ne vous empêche d'en utiliser un autre ([Eclipse](https://www.eclipse.org/), [NetBeans](https://netbeans.org/) etc.).
 
-D'abord, et comme pour tous les tps de POO qui vont suivre, vous allez forker ce dépôt pour pouvoir commencer à travailler localement :
+D'abord, et comme pour tous les TPs de POO qui vont suivre, vous allez "forker" ce dépôt pour pouvoir commencer à travailler localement :
 
 https://classroom.github.com/a/bfBd4j6U
 
-Contrairement au TP1, ne clonez pas tout de suite ce fork localement sur votre machine, l'IDE s'en chargera tout seul (cf. ci-dessous).
+Contrairement au TP1, **ne clonez pas tout de suite** ce fork localement sur votre machine, l'IDE s'en chargera tout seul (cf. ci-dessous).
 
 ### Premiers pas avec l'IDE
 
@@ -71,7 +71,10 @@ cd ~/idea-IU-***/bin/
 ```
 -->
 
-Pour installer l'IDE directement à partir du code source ou sur Windows, ou Mac OS, vous pouvez suivre les indications ici : https://www.jetbrains.com/help/idea/installation-guide.html#standalone
+Pour installer l'IDE sur Windows, ou Mac OS, ou Linux depuis un exécutable, il suffit de le télécharger ici :
+https://www.jetbrains.com/help/idea/installation-guide.html#standalone
+
+Les étapes qui vont suivre s'appliquent quelque soit votre système d'exploitation.
 
 **Obtention de la licence académique Ultimate**
 
@@ -98,13 +101,13 @@ Votre licence académique est désormais active sur votre machine. Normalement v
 ![](ressources/Fenetre_principale_IDE.png)
 
 Ici, si vous souhaitez, vous pouvez personnaliser votre installation (menu _Customize_) -- choisissez ce qui vous convient le mieux.
-
 Vous êtes presque prêt à commencer à coder !
 
 **Import du projet dans l'IDE**
 
 Maintenant, depuis l'onglet _Projects_ vous devez choisir comment vous souhaitez démarrer le travail.
-Dans notre cas il faut cloner votre dépôt Git, vous choisirez donc l'option *Get from VCS*, ou _VCS_ signifie _Version Control_.
+Pour le TP d'aujourd'hui il faudra cloner votre dépôt depuis GitHub (_tp2-VotreLogin_).
+Normalement l'installation Git de votre machine a déjà été détecté par votre IDE, donc vous choisirez l'option *Get from VCS*, ou _VCS_ signifie _Version Control_.
 L'URL sera celui correspondant à votre fork du TP2 sur GitHub :
 
 ![](ressources/ImportProjet.png)
