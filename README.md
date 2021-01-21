@@ -23,36 +23,34 @@
 Pendant les TP nous vous conseillons d'utiliser un environnement de développement intégré (IDE en anglais).
 Les avantages sont multiples : le refactoring du code, l'auto-complétion, la suggestion des méthodes/attributs/classes,
 la documentation intégrée, le debuggage, une bonne intégration de Git et GitHub, des tests unitaires, etc.
-Dans ce cours nous utiliserons l'IDE **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** de chez **[JetBrains](https://www.jetbrains.com)**,
-installé sur les machines du département. Il devrait vous faciliter la vie au quotidien dans la réalisation de vos TP.
+Dans ce cours nous utiliserons l'IDE **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** de chez **[JetBrains](https://www.jetbrains.com)**. Il devrait vous faciliter la vie au quotidien dans la réalisation de vos TP.
 Bien évidement, rien ne vous empêche d'en utiliser un autre ([Eclipse](https://www.eclipse.org/), [NetBeans](https://netbeans.org/) etc.).
 
 D'abord, et comme pour tous les TPs de POO qui vont suivre, vous allez "forker" ce dépôt pour pouvoir commencer à travailler localement :
 
 https://classroom.github.com/a/bfBd4j6U
 
-Contrairement au TP1, **ne clonez pas tout de suite** ce fork localement sur votre machine, l'IDE s'en chargera tout seul (cf. ci-dessous).
+Contrairement au TP1, **ne clonez pas tout de suite** ce fork localement sur votre machine, l'IDE s'en chargera tout seul (voir ci-dessous).
 
 ### Premiers pas avec l'IDE
 
-IntelliJ IDEA possède deux versions, la première dite *'communautaire'* est totalement open source et peut être utilisée 
-gratuitement par n'importe qui et la seconde dite *'ultimate'* qui est plus riche en fonctionnalités et qui n'est pas 
-gratuite. Pour les TPs qui vont suivre, vous aurez besoin de la version *'ultimate'* et par chance, comme dans le cas de GitHub, en tant qu'étudiant, vous avez la 
+IntelliJ IDEA possède deux versions, la première dite *'communautaire'* est totalement open source et peut être utilisée gratuitement par n'importe qui et la seconde dite *'ultimate'* qui est plus riche en fonctionnalités et qui n'est pas gratuite. Pour les TPs qui vont suivre, vous aurez besoin de la version *'ultimate'* et par chance, comme dans le cas de GitHub, en tant qu'étudiant, vous avez la 
 possibilité de pouvoir bénéficier d'une licence pour tous les produits JetBrains.
 
 **Installation et premier lancement de l'IDE**
+* Si vous êtes au département, sur les postes Linux vous trouverez l'installation dans `/opt/ide-Ultimate/`. Pour le lancer :
 
-<!-- Sur les postes Linux du département informatique de l'IUT de Montpellier, IntelliJ IDEA Ultimate est installé dans `/opt/ide-Ultimate/` :
-```
-~/RepertoireCourant$  cd /opt/ide-Ultimate/bin
-/opt/ide-Ultimate/bin$  ./idea.sh
-```
--->
-Sur Ubuntu le plus simple c'est d'utiliser _Snap_ qui est un système de distribution de logiciels simplifié et qui est pré-installé sur toutes les versions récentes d'Ubuntu. À partir d'un terminal tapez :
+    ```
+    ~/RepertoireCourant$  cd /opt/ide-Ultimate/bin
+    /opt/ide-Ultimate/bin$  ./idea.sh
+    ```
 
-```
-sudo snap install intellij-idea-ultimate --classic
-```
+* Si vous êtes chez vous et sur Ubuntu le plus simple pour installer l'IDE c'est d'utiliser _Snap_, qui est un système de distribution de logiciels simplifié et qui est pré-installé sur toutes les versions récentes d'Ubuntu. À partir d'un terminal tapez :
+
+    ```
+    sudo snap install intellij-idea-ultimate --classic
+    ```
+* Pour installer l'IDE sur Windows, ou Mac OS, ou Linux depuis un exécutable, il suffit de le télécharger ici : https://www.jetbrains.com/help/idea/installation-guide.html#standalone
 
 Le téléchargement et l'installation risquent de prendre un peu de temps, donc en attendant vous pouvez demander la licence et vous familiariser avec les consignes qui suivent.
 
@@ -71,8 +69,7 @@ cd ~/idea-IU-***/bin/
 ```
 -->
 
-Pour installer l'IDE sur Windows, ou Mac OS, ou Linux depuis un exécutable, il suffit de le télécharger ici :
-https://www.jetbrains.com/help/idea/installation-guide.html#standalone
+
 
 Les étapes qui vont suivre s'appliquent quelque soit votre système d'exploitation.
 
