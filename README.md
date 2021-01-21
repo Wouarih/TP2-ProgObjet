@@ -38,11 +38,11 @@ IntelliJ IDEA possède deux versions, la première dite *'communautaire'* est to
 possibilité de pouvoir bénéficier d'une licence pour tous les produits JetBrains.
 
 **Installation et premier lancement de l'IDE**
-* Si vous êtes au département, sur les postes Linux vous trouverez l'installation dans `/opt/ide-Ultimate/`. Pour le lancer :
+* Si vous êtes au département, sur les postes Linux vous trouverez l'installation dans `/opt/idea-Ultimate/`. Pour le lancer :
 
     ```
     ~/RepertoireCourant$  cd /opt/ide-Ultimate/bin
-    /opt/ide-Ultimate/bin$  ./idea.sh
+    /opt/idea-Ultimate/bin$  ./idea.sh
     ```
 
 * Si vous êtes chez vous et sur Ubuntu le plus simple pour installer l'IDE c'est d'utiliser _Snap_, qui est un système de distribution de logiciels simplifié et qui est pré-installé sur toutes les versions récentes d'Ubuntu. À partir d'un terminal tapez :
@@ -268,7 +268,7 @@ Comme pour l'exercice précédent, vous activerez les tests les uns après les a
 
 
 
-### Exercice 3 : Calculette romaine
+### Exercice 3 (Bonus) : Calculette romaine
 
 Vous êtes chargé de réaliser une calculette simplifiée qui effectue des additions et des soustractions des nombres écrits en numérotation romaine. Dans cette numérotation on utilise des caractères parmi sept lettres de l'alphabet latin : `I`, `X`, `L`, `C`, `D` et `M`. La signification en numérotation décimale classique est donnée ci-dessous :
 
