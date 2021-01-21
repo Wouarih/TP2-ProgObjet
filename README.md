@@ -162,7 +162,7 @@ doit s’écrire avant la fonctionnalité voulue, il est donc censé échouer in
 4. __Refactoriser__ (simplifier, améliorer, optimiser, etc.) tout le code tout en gardant la fonctionnalité. Durant cette étape les tests écrits préalablement sont exécutés en permanence pour certifier la validité des changements.
 
 
-Ce workflow se décrit par le triptyque "RED, GREEN, REFACTOR" dans le schéma suivant :
+Ce workflow se décrit par le triptyque "FAIL, PASS, REFACTOR" dans le schéma suivant :
 
 ![](ressources/test-driven-development.png)
 
@@ -185,12 +185,13 @@ class MaPetiteClasseDeTests {
     
     @Test
     void monJoliPremierTest() {
-        assertEquals(3, 1 + 2); // On vérifie que la valeur attendue 3 et bien le résultat de 1 + 2
+        assertEquals(3, 1 + 2); // On vérifie que la valeur attendue 3 est bien le résultat de 1 + 2
     }
 }
 ```
 
-Pour exécuter les tests, la façon la plus simple est d'utiliser votre IDE : ouvrir la classe contenant le test et utiliser le bouton 'Play' exécuter les tests contenus dans cette classe.
+Pour exécuter les tests, la façon la plus simple est d'utiliser votre IDE : ouvrir la classe contenant le test et
+utiliser le bouton 'Play' pour exécuter les tests contenus dans cette classe.
 Le résultat de l’exécution s'affiche en bas de la fenêtre de l'IDE :
  * les tests ayant **réussi** sont affichés en **vert**
  * les tests ayant **échoué** sont en **rouge**
@@ -199,9 +200,10 @@ Votre IDE vous affiche également la cause de l'échec en vous indiquant le rés
 et le résultat effectif.
 
 #### Organisation du projet Java - convention Maven
-Pour bien séparer le code de ses tests, nous allons utiliser la convention [Maven](https://fr.wikipedia.org/wiki/Apache_Maven)
+Dans tous les projets informatiques sérieux, les tests sont systématiquement séparés du code testé.
+Pour le faire, nous allons utiliser la convention [Maven](https://fr.wikipedia.org/wiki/Apache_Maven)
 dans l'ensemble des TPs de POO.
-Ainsi le code est organisé de la façon suivante :
+Ainsi le code sera organisé de la façon suivante :
 
 ![](ressources/ArborescenceMaven.png)
 * l'intégralité des sources du projet se trouve dans le répertoire `src/`
@@ -210,7 +212,7 @@ Ainsi le code est organisé de la façon suivante :
 
 ![](ressources/ArborescenceMavenDetail.png)
 * le code source (ou code applicatif) se trouve dans `src/main/java`
-* le code source de test se trouve dans `src/test`
+* le code source de test se trouve dans `src/test/java`
 
 
 
@@ -234,17 +236,25 @@ Une série 'FizzBuzz' de taille `n` est une suite d'entiers positifs où, lorsqu
 
 1 ; 2 ; Fizz ; 4 ; Buzz ; Fizz ; 7 ; 8 ; Fizz ; Buzz ; 11 ; Fizz ; 13 ; 14 ; FizzBuzz ; 16 ; 17 ; Fizz ; 19 ; Buzz
 
-Implémentez la classe `FizzBuzz` qui vous est donnée dans le paquetage `fr.umontpellier.iut.exercice1`. Cette classe contient deux fonctions qu'il faudra compléter :
+Le programme correspondant devrait bien évidemment être très facile, mais on vous demande de l'implémenter **en suivant les consignes ci-dessous**.
+
+* La classe à implémenter est `FizzBuzz`, située dans le paquetage `fr.umontpellier.iut.exercice1`.
+Elle contient deux fonctions qu'il faudra compléter :
   - `getValue(int i)` qui retournera une chaîne de caractères correspondant au nombre `i`dans la série FizzBuzz
   - `computeList(int n)` qui retournera toute la série 'FizzBuzz' jusqu'à la valeur passée en paramètre 
 
-La classe contenant les tests est située dans le répertoire correspondant au paquetage `fr.umontpellier.iut.exercice1` dans l'arborescence `src/test` de votre projet.
-Vous activerez les tests les uns après les autres et soumettrez (avec un commit) votre solution après __chaque itération__ du cycle principal du workflow.
+* La classe contenant les tests est située dans le répertoire correspondant au paquetage `fr.umontpellier.iut.exercice1` dans l'arborescence `src/test` de votre projet.
+  - Vous activerez les tests les uns après les autres, et pour chaque tests vous passerez les trois étapes d'une itération : FAIL, PASS, REFACTOR. 
+  - Vous soumettrez (avec un `git commit`) votre solution après __chaque itération__ du cycle principal du workflow.
 
-La classe principale (contenant le `main`) est la classe `App`, et se trouve dans le paquetage `fr.umontpellier.iut.exercice1`. Implémentez-la (supprimez la ligne qui lève une exception) pour simuler le bon fonctionnement de votre programme.
+Même si l'exercice paraît facile, prêtez une attention particulière à l'étape de refactorisation.
+Commencez à vous servir de votre IDE pour vous faire assister (pour renommer les méthodes ou variables, pour l'autocomplétion, etc.)
 
-Même si l'exercice paraît facile, prêtez une attention particulière à l'étape de refactorisation. Vous vous servirez de votre IDE pour renommer les méthodes ou variables, pour l'autocomplétion, etc.
+Notez que pour faire évoluer le code des fonctions de la classe `FizzBuzz`, en faisant passer tous les tests, vous n'avez pas besoin de la classe principale (contenant le `main`).
+Et c'est très bien ainsi, car le rôle du `main` est de faire tourner l'application en faisant communiquer tous les objets de l'application et pas de vérifier les bêtises écrites dans chaque classe de l'application...
 
+Une fois que votre classe `FizzBuzz` est valide, vous pouvez implémenter le `main` de la classe principale `App`,
+qui se trouve dans le paquetage `fr.umontpellier.iut.exercice1`. Implémentez-la (supprimez la ligne qui lève une erreur) pour simuler le bon fonctionnement de votre programme.
 
 
 ### Exercice 2 : Facteurs Premiers
