@@ -16,7 +16,7 @@
     * `du -sh *` pour voir combien d'espace vous avez déjà utilisé pour chaque fichier (sans fichiers cachés)
     * `du -sch .[!.]* *` pour voir combien d'espace vous avez déjà utilisé pour chaque fichier, y compris les fichiers cachés
 * Supprimez les fichiers inutiles.
-* Pour évitez des problèmes durant vos TPs d'informatique, vous devriez toujours **garder 300-400 Mo d'espace libre**.
+* Pour éviter des problèmes durant vos TPs d'informatique, vous devriez toujours **garder 300-400 Mo d'espace libre**.
 -->
 
 ## TP 2 : Prise en main de l'IDE et travail en mode TDD
@@ -137,7 +137,7 @@ vous demande d'indiquer le SDK à utiliser (grosso modo c'est l'ensemble d'outil
 
 ![](ressources/SDK_non_detected.png)
 
-Si vous avez ce problème, cliquez sur _SetUp SDK_ et choisissez celui par défaut ou une autre version supérieure à 1.8.
+Si vous avez ce problème, cliquez sur _SetUp SDK_ et choisissez celui par défaut ou une autre version supérieure à 11.
 
 
 ### Workflow
@@ -148,12 +148,12 @@ progressivement un filet de sécurité qui vérifiera que votre code continue à
 
 Le TDD est une méthode de développement de logiciels qui consiste
 à travailler sur des cycles de développement très courts. La conception apparaît au fur et à mesure du développement en commençant à écrire les tests avant le code applicatif. Ceci favorise une meilleure compréhension du problème. Pour le développeur, les tests vont constituer une spécification technique exécutable et vérifiable à tout 
-moment. Ainsi en rajoutant des tests, le développeur converge progressivement à la fois vers une spécification plus fine 
+moment. Ainsi en ajoutant des tests au fur et à mesure, le développeur converge progressivement à la fois vers une spécification plus fine 
 et un code fonctionnel associé.
 
 Ci-dessous le déroulement d’un cycle :
 1. Écrire un premier test automatique qui est censé définir une nouvelle fonctionnalité. Le test
-doit s’écrire avant la fonctionnalité voulue, il est donc censé échouer initialement (normal, car vous n'avez encore rien programmé).
+doit s’écrire **avant la fonctionnalité voulue**, il est donc censé échouer initialement (normal, car vous n'avez encore rien programmé).
 2. Écrire le code __minimal__ suffisant pour passer le test (principe _BabySteps_).
 3. Vérifier que le test passe.
 4. __Refactoriser__ (simplifier, améliorer, optimiser, etc.) tout le code tout en gardant la fonctionnalité. Durant cette étape les tests écrits préalablement sont exécutés en permanence pour certifier la validité des changements.
@@ -228,7 +228,7 @@ passer__ (pas de messages en rouge dans la console de l'IDE).
 
 ### Exercice 1 : Fizz Buzz !
 
-Le kata Fizz Buzz est un des katas les plus connus pour l'apprentissage du TDD.
+Le Fizz Buzz est un des [katas](https://fr.wikipedia.org/wiki/Kata_(programmation)) les plus connus pour l'apprentissage du TDD.
 Une série 'FizzBuzz' de taille `n` est une suite d'entiers positifs où, lorsqu'un multiple de 3 est rencontré on imprime "Fizz", et lorsqu'un multiple de 5 est rencontré on imprime "Buzz". Voici la série FizzBuzz de taille 20 :
 
 1 ; 2 ; Fizz ; 4 ; Buzz ; Fizz ; 7 ; 8 ; Fizz ; Buzz ; 11 ; Fizz ; 13 ; 14 ; FizzBuzz ; 16 ; 17 ; Fizz ; 19 ; Buzz
