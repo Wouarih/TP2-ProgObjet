@@ -1,9 +1,9 @@
 package fr.umontpellier.iut.exercice2;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class PrimeFactors {
-    public List<Integer> computeFactors(int number) {
+    public ArrayList<Integer> computeFactors(int number) {
         throw new RuntimeException("Not yet implemented");
     }
 }

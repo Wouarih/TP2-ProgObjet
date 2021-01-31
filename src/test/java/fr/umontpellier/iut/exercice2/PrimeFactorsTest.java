@@ -6,14 +6,13 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 class PrimeFactorsTest {
     private PrimeFactors primeFactors = new PrimeFactors();
 
 
-    private List<Integer> list(int... ints) {
-        List<Integer> list = new ArrayList<>();
+    private ArrayList<Integer> list(int... ints) {
+        ArrayList<Integer> list = new ArrayList<>();
         for (int i : ints)
             list.add(i);
         return list;
