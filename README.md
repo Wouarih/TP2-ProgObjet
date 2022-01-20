@@ -156,9 +156,7 @@ Un **test unitaire** est une méthode écrite par le programmeur afin de vérifi
 Le terme _unitaire_ insiste sur le côté "élémentaire" de la fonctionnalité (unité) à tester.
 
 L'outil le plus répandu pour gérer les tests unitaires en Java est le framework [JUnit](https://junit.org/junit5/).
-Les tests sont écrits dans une classe Java comme vous avez l'habitude.
-La différence entre les fonctions "normales" et les fonctions de test est l'annotation `@Test`.
-Celle-ci doit précéder chaque test unitaire. Exemple :
+Les tests sont écrits sous forme de fonctions dans une classe Java. Pour que le compilateur puisse faire la différence entre une fonction de test et une fonction "normale", il faut ajouter l'annotation `@Test`. Celle-ci doit précéder chaque test unitaire. Exemple :
 ```java
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
@@ -229,8 +227,8 @@ Le programme correspondant devrait bien évidemment être très facile, mais on 
   - Vous activerez les tests les uns après les autres, et pour chaque tests vous passerez les trois étapes d'une itération : FAIL, PASS, REFACTOR.
   - Vous soumettrez (avec un `git commit`) votre solution après __chaque itération__ du cycle principal du workflow.
 
-Même si l'exercice paraît facile, prêtez une attention particulière à l'étape de refactorisation.
-Commencez à vous servir de votre IDE pour vous faire assister (pour renommer les méthodes ou variables, pour l'autocomplétion, etc.)
+Même si l'exercice paraît facile, prêtez une attention particulière à l'étape de **refactorisation** (c.-à-d. simplification/nettoyage/suppression des redondances).
+Commencez à vous servir de votre IDE pour vous faire assister : renommer les variables, renommer les fonctions, utiliser l'autocomplétion, etc.
 
 Notez que pour faire évoluer le code des fonctions de la classe `FizzBuzz`, en faisant passer tous les tests, vous n'avez pas besoin de la classe principale (contenant le `main`).
 Et c'est très bien ainsi, car le rôle du `main` est de faire tourner l'application en faisant communiquer tous les objets de l'application et pas de vérifier les bêtises écrites dans chaque classe de l'application...
@@ -244,9 +242,18 @@ qui se trouve dans le paquetage `fr.umontpellier.iut.exercice1`. Implémentez-la
 D'après le Théorème fondamental de l'arithmétique, tout entier strictement positif peut être écrit comme un produit de nombres premiers. Il vous est demandé d'implémenter la méthode qui, pour un entier strictement positif donné, renvoie la liste de ses facteurs premiers en ordre croissant.
 Par exemple pour l'entier 5, la liste retournée devrait être [5], alors que pour l'entier 12, la liste retournée devrait être [2,2,3].
 
-La méthode que vous devez implémenter est `computeFactors(int)`, située dans la classe `PrimeFactors` (paquetage `fr.umontpellier.iut.exercice2`). Cette fonction devra renvoyer la liste de facteurs premiers pour l'entier passé en paramètre.
+La méthode que vous devez implémenter est `computeFactors(int)`, située dans la classe `PrimeFactors` du paquetage `fr.umontpellier.iut.exercice2`. Cette fonction devra renvoyer la liste (type [ArrayList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html) défini en Java) de facteurs premiers pour l'entier passé en paramètre. Voici comment on utiliser des `ArrayList` contenant des entiers :
+```java
+ArrayList<Integer> maListeJava = new ArrayList<>(); // déclaration + instanciation de liste vide
+maListeJava.add(42); // ajout de l'entier 42 à la fin de la liste
+maListeJava.add(-7);  // ajout de l'entier -7 à la fin de la liste
+maListeJava.add(2);  // ajout de l'entier 2 à la fin de la liste
+System.out.println(maListeJava); // affiche [42, -7, 2]
+maListeJava.remove(1); // supprime l'élément à la position 1 dans la liste
+System.out.println(maListeJava); // affiche [42, 2]
+```
 
-Comme pour l'exercice précédent, vous activerez les tests un par un en réalisant le code minimal nécessaire. N'oubliez pas de __refactoriser__ le code à chaque étape (c.à.d. simplifier/nettoyer/enlever les redondances). Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
+Comme pour l'exercice précédent, vous activerez les tests un par un en réalisant le code minimal nécessaire. N'oubliez pas de __refactoriser__ le code à chaque étape. Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
 
 À la fin de l'exercice, pour vous convaincre de la validité de votre code, vous ajouterez deux-trois tests supplémentaires pour deux nombres que vous aurez choisis aléatoirement (par exemple, dans un terminal avec la commande `echo $RANDOM`). Est-ce que votre programme passe ce nouveau test ?
 
