@@ -1,4 +1,4 @@
-package fr.umontpellier.iut.exercice3;
+package fr.umontpellier.iut.exercice4;
 
 public class RomanToNumeral {
 

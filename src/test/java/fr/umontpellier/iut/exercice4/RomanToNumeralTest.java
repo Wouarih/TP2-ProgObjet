@@ -1,4 +1,4 @@
-package fr.umontpellier.iut.exercice3;
+package fr.umontpellier.iut.exercice4;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

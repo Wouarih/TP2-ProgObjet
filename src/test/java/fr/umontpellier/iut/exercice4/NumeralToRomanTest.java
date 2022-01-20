@@ -1,4 +1,4 @@
-package fr.umontpellier.iut.exercice3;
+package fr.umontpellier.iut.exercice4;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

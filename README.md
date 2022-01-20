@@ -1,6 +1,4 @@
-# ![](ressources/logo.jpeg)
-
-# Développement Orienté Objets
+# ![](ressources/logo.jpeg) Développement Orienté Objets
 
 ### IUT Montpellier-Sète – Département Informatique
 
@@ -243,19 +241,37 @@ qui se trouve dans le paquetage `fr.umontpellier.iut.exercice1`. Implémentez-la
 
 ### Exercice 2 : Facteurs Premiers
 
-D'après le Théorème fondamental de l'arithmétique, tout entier strictement positif peut être écrit comme un produit de nombres premiers.
-Dans cet exercice il vous est demandé d'implémenter la méthode qui, pour un entier strictement positif donné, renvoie la liste de ses facteurs premiers en ordre croissant.
+D'après le Théorème fondamental de l'arithmétique, tout entier strictement positif peut être écrit comme un produit de nombres premiers. Il vous est demandé d'implémenter la méthode qui, pour un entier strictement positif donné, renvoie la liste de ses facteurs premiers en ordre croissant.
 Par exemple pour l'entier 5, la liste retournée devrait être [5], alors que pour l'entier 12, la liste retournée devrait être [2,2,3].
 
-La méthode que vous devez implémenter est `computeFactors(int)`. Elle est située dans la classe `PrimeFactors` (paquetage `fr.umontpellier.iut.exercice2`) qui renvoie la liste de facteurs premiers pour l'entier passé en paramètre.
+La méthode que vous devez implémenter est `computeFactors(int)`, située dans la classe `PrimeFactors` (paquetage `fr.umontpellier.iut.exercice2`). Cette fonction devra renvoyer la liste de facteurs premiers pour l'entier passé en paramètre.
 
-Comme pour l'exercice précédent, vous activerez les tests les uns après les autres. N'oubliez pas de __refactoriser__ (c.à.d. simplifier/nettoyer/factoriser) le code à chaque étape. Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
+Comme pour l'exercice précédent, vous activerez les tests un par un en réalisant le code minimal nécessaire. N'oubliez pas de __refactoriser__ le code à chaque étape (c.à.d. simplifier/nettoyer/enlever les redondances). Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
 
 À la fin de l'exercice, pour vous convaincre de la validité de votre code, vous ajouterez deux-trois tests supplémentaires pour deux nombres que vous aurez choisis aléatoirement (par exemple, dans un terminal avec la commande `echo $RANDOM`). Est-ce que votre programme passe ce nouveau test ?
 
 
+### Exercice 3 : Jeu de Tennis
+Le but ici est d'écrire un petit programme permettant de gérer les scores de deux joueurs dans un jeu de tennis. Seul le jeu nous intéresse ici (pas les sets, ni le match).
 
-### Exercice 3 (Bonus) : Calculette romaine
+Le comptage des points dans un jeu se fait de la manière suivante :
+* Chaque joueur peut avoir un des quatre points suivants : “0” “15” “30” “40”
+* Le jeu est remporté par le premier joueur ayant remporté 4 points consécutifs et au moins 2 points de plus que son adversaire
+* Si les deux joueurs sont à 40, alors ils sont à "_égalité_"
+* Si les deux joueurs sont à égalité, alors le gagnant du point suivant obtient un "_avantage_"
+* Si un joueur a l'avantage et gagne le point, alors il remporte le jeu
+* Si un joueur a l'avantage et perd le point, alors les deux joueurs reviennent à égalité
+
+Complétez la classe `Tennis` en travaillant en mode TDD : activer les tests un par un et écrivez le code **minimal** nécessaire pour valider le test tout en vérifiant que les tests précédemment validés, passent. N'oubliez pas la phase de **refactorisation** à chaque étape (c.à.d. simplification/nettoyage/factorisation des redondances).
+
+La fonction `getScore()` doit retourner le texte correspondant à l'état de la partie (analyser le texte utilisé dans les tests pour comprendre l'affichage).
+
+Dans cet exercice, vous aurez à manipuler les chaînes de caractères de type [`String`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html). Voici quelques indications concernant le format String pour cet exercice :
+
+* pour concaténer deux chaînes `s1` et `s2`, vous pouvez vous contenter d'utiliser `s1+s2`
+* pour comparer deux chaînes `s1` et `s2`, vous utiliserez l'instruction `s1.equals(s2)`
+
+### Exercice 4 (Bonus) : Calculette romaine
 
 Vous êtes chargé de réaliser une calculette simplifiée qui effectue des additions et des soustractions des nombres écrits en numérotation romaine. Dans cette numérotation on utilise des caractères parmi sept lettres de l'alphabet latin : `I`, `X`, `L`, `C`, `D` et `M`. La signification en numérotation décimale classique est donnée ci-dessous :
 
@@ -286,7 +302,7 @@ Par exemple :
 
 Faites très attention pour cet exercice de bien respecter le principe du TDD en ajoutant vraiment tout le temps la quantité minimale de code nécessaire à la validation des tests. Si vous suivez cette règle, il se résout très facilement alors qu'en l'abordant de manière générale, il comporte de nombreux pièges pouvant vous faire perdre un temps précieux.
 
-Dans cet exercice, vous allez manipuler la classe [`String`](https://docs.oracle.com/javase/8/docs/api/?java/lang/String.html). Cette classe possède de nombreuses méthodes utilitaires pour manipuler facilement les chaînes de caractères.
+Dans cet exercice, vous allez manipuler la classe [`String`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html). Cette classe possède de nombreuses méthodes utilitaires pour manipuler facilement les chaînes de caractères.
 
 **Convertisseur de nombres romains**
 
@@ -310,13 +326,11 @@ En utilisant les deux classes écrites précédemment, créez une classe `RomanA
 Le retour de cette fonction devra correspondre au résultat du calcul de l'expression arithmétique écrit sous forme d'un nombre romain.
 Par exemple pour l'expression arithmétique `MMMXL` + `XII` - `CIX` passée en paramètre, la valeur retournée devrait être : `MMCMXLIII`.
 
-Afin de vérifier votre code, vous pouvez écrire quelques tests unitaires dans une nouvelle classe de test (par ex. `RomanAdditionnerTest` dans le paquetage `fr.umontpellier.iut.exercice3`).
+Afin de vérifier votre code, vous pouvez écrire quelques tests unitaires dans une nouvelle classe de test (par ex. `RomanAdditionnerTest` dans le paquetage `fr.umontpellier.iut.exercice4`).
 
 ### Et ce n'est pas fini !
 
-Vous trouverez d'autres katas qui vous permettront de mieux apprendre la programmation en mode TDD :
-
-http://codingdojo.org/kata/
+Vous trouverez d'autres katas qui vous permettront de mieux apprendre la programmation en mode TDD : http://codingdojo.org/kata/
 
 Dans tous les cas gardez cette citation d'Edsger W. Dijkstra en tête :
 > Program testing can be used to show the presence of bugs, but never to show their absence.
