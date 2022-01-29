@@ -5,10 +5,10 @@ stages:
 build:
     stage: build
     script:
-        - echo "Building"
+        - echo "Build du projet"
         - mvn clean
 test:
     stage: test
     script:
-        - echo "Testing"
+        - echo "Vérification si les tests actifs passent"
         - mvn test
