@@ -30,8 +30,7 @@ la documentation intégrée, le debuggage, une bonne intégration de Git, GitLab
 Dans ce cours nous utiliserons l'IDE **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** de chez **[JetBrains](https://www.jetbrains.com)**. Il devrait vous faciliter la vie au quotidien dans la réalisation de vos TP.
 Bien évidement, rien ne vous empêche d'en utiliser un autre ([Eclipse](https://www.eclipse.org/), [NetBeans](https://netbeans.org/) etc.).
 
-Votre fork de ce TP (_tp2-votre-login_) a été créé dans le groupe [Dev-Objets](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets).
-Vous pouvez d'ores et déjà le cloner localement sur votre machine dans votre répertoire de travail. Vous pouvez également attendre et le faire à travers l'IDE (voir ci-dessous).
+Votre fork de ce TP (_tp2-votre-login_) a été créé dans votre sous-groupe dans [Dev-Objets](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets). Vous pouvez d'ores et déjà le cloner localement sur votre machine dans votre répertoire de travail. Vous pouvez également attendre et le faire à travers l'IDE (voir ci-dessous).
 
 ### Premiers pas avec l'IDE
 
@@ -162,11 +161,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 class MaPetiteClasseDeTests {
-
-  @Test
-  void monJoliPremierTest() {
-    assertEquals(3, 1 + 2); // On vérifie que la valeur attendue 3 est bien le résultat de 1 + 2
-  }
+    
+    @Test
+    void monJoliPremierTest() {
+        assertEquals(3, 1 + 2); // On vérifie que la valeur attendue 3 est bien le résultat de 1 + 2
+    }
 }
 ```
 
@@ -245,12 +244,12 @@ Par exemple pour l'entier 5, la liste retournée devrait être [5], alors que po
 La méthode que vous devez implémenter est `computeFactors(int)`, située dans la classe `PrimeFactors` du paquetage `fr.umontpellier.iut.exercice2`. Cette fonction devra renvoyer la liste (type [ArrayList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html) défini en Java) de facteurs premiers pour l'entier passé en paramètre. Voici comment on utiliser des `ArrayList` contenant des entiers :
 ```java
 ArrayList<Integer> maListeJava = new ArrayList<>(); // déclaration + instanciation de liste vide
-        maListeJava.add(42); // ajout de l'entier 42 à la fin de la liste
-        maListeJava.add(-7);  // ajout de l'entier -7 à la fin de la liste
-        maListeJava.add(2);  // ajout de l'entier 2 à la fin de la liste
-        System.out.println(maListeJava); // affiche [42, -7, 2]
-        maListeJava.remove(1); // supprime l'élément à la position 1 dans la liste
-        System.out.println(maListeJava); // affiche [42, 2]
+maListeJava.add(42); // ajout de l'entier 42 à la fin de la liste
+maListeJava.add(-7);  // ajout de l'entier -7 à la fin de la liste
+maListeJava.add(2);  // ajout de l'entier 2 à la fin de la liste
+System.out.println(maListeJava); // affiche [42, -7, 2]
+maListeJava.remove(1); // supprime l'élément à la position 1 dans la liste
+System.out.println(maListeJava); // affiche [42, 2]
 ```
 
 Comme pour l'exercice précédent, vous activerez les tests un par un en réalisant le code minimal nécessaire. N'oubliez pas de __refactoriser__ le code à chaque étape. Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
@@ -259,7 +258,7 @@ Comme pour l'exercice précédent, vous activerez les tests un par un en réalis
 
 
 ### Exercice 3 : Jeu de Tennis
-Le but ici est d'écrire un petit programme permettant de gérer les scores de deux joueurs dans un jeu de tennis. Seul le jeu nous intéresse ici (pas les sets, ni le match).
+Le but ici est d'écrire un petit programme permettant d'interpréter les scores de deux joueurs dans un jeu de tennis. Seul le jeu nous intéresse ici (pas les sets, ni le match).
 
 Le comptage des points dans un jeu se fait de la manière suivante :
 * Chaque joueur peut avoir un des quatre points suivants : “0” “15” “30” “40”
@@ -269,9 +268,9 @@ Le comptage des points dans un jeu se fait de la manière suivante :
 * Si un joueur a l'avantage et gagne le point, alors il remporte le jeu
 * Si un joueur a l'avantage et perd le point, alors les deux joueurs reviennent à égalité
 
-Complétez la classe `Tennis` en travaillant en mode TDD : activer les tests un par un et écrivez le code **minimal** nécessaire pour valider le test tout en vérifiant que les tests précédemment validés, passent. N'oubliez pas la phase de **refactorisation** à chaque étape (c.à.d. simplification/nettoyage/factorisation des redondances).
+Votre rôle est de compléter la classe `Tennis` de façon à ce que la fonction `getScore()` retourne **le texte** correspondant à l'état du jeu (analysez les tests unitaires pour comprendre l'affichage). Il ne vous est pas demandé de désigner ou stocker le gagnant. Seul l'interprétation textuelle du score est demandée
 
-La fonction `getScore()` doit retourner le texte correspondant à l'état de la partie (analyser le texte utilisé dans les tests pour comprendre l'affichage).
+Vous l'aurez compris, le tout doit être fait en mode TDD ! Activez les tests un par un et écrivez le code **minimal** nécessaire pour valider le test tout en vérifiant que les tests précédemment validés, passent. N'oubliez pas la phase de **refactorisation** à chaque étape.
 
 Dans cet exercice, vous aurez à manipuler les chaînes de caractères de type [`String`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html). Voici quelques indications concernant le format String pour cet exercice :
 

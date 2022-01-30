@@ -11,6 +11,7 @@ public class Tennis {
         j2 = joueur2;
     }
 
+    // incrémente les points du joueur correspondant
     public void gagnerPoint(String joueur) {
         throw new RuntimeException("La fonction n'est pas encore implémentée !");
     }
