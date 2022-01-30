@@ -162,11 +162,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 class MaPetiteClasseDeTests {
-    
-    @Test
-    void monJoliPremierTest() {
-        assertEquals(3, 1 + 2); // On vérifie que la valeur attendue 3 est bien le résultat de 1 + 2
-    }
+
+  @Test
+  void monJoliPremierTest() {
+    assertEquals(3, 1 + 2); // On vérifie que la valeur attendue 3 est bien le résultat de 1 + 2
+  }
 }
 ```
 
@@ -245,12 +245,12 @@ Par exemple pour l'entier 5, la liste retournée devrait être [5], alors que po
 La méthode que vous devez implémenter est `computeFactors(int)`, située dans la classe `PrimeFactors` du paquetage `fr.umontpellier.iut.exercice2`. Cette fonction devra renvoyer la liste (type [ArrayList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html) défini en Java) de facteurs premiers pour l'entier passé en paramètre. Voici comment on utiliser des `ArrayList` contenant des entiers :
 ```java
 ArrayList<Integer> maListeJava = new ArrayList<>(); // déclaration + instanciation de liste vide
-maListeJava.add(42); // ajout de l'entier 42 à la fin de la liste
-maListeJava.add(-7);  // ajout de l'entier -7 à la fin de la liste
-maListeJava.add(2);  // ajout de l'entier 2 à la fin de la liste
-System.out.println(maListeJava); // affiche [42, -7, 2]
-maListeJava.remove(1); // supprime l'élément à la position 1 dans la liste
-System.out.println(maListeJava); // affiche [42, 2]
+        maListeJava.add(42); // ajout de l'entier 42 à la fin de la liste
+        maListeJava.add(-7);  // ajout de l'entier -7 à la fin de la liste
+        maListeJava.add(2);  // ajout de l'entier 2 à la fin de la liste
+        System.out.println(maListeJava); // affiche [42, -7, 2]
+        maListeJava.remove(1); // supprime l'élément à la position 1 dans la liste
+        System.out.println(maListeJava); // affiche [42, 2]
 ```
 
 Comme pour l'exercice précédent, vous activerez les tests un par un en réalisant le code minimal nécessaire. N'oubliez pas de __refactoriser__ le code à chaque étape. Vous soumettrez avec Git votre solution après chaque itération du cycle principal du workflow.
@@ -263,7 +263,7 @@ Le but ici est d'écrire un petit programme permettant de gérer les scores de d
 
 Le comptage des points dans un jeu se fait de la manière suivante :
 * Chaque joueur peut avoir un des quatre points suivants : “0” “15” “30” “40”
-* Le jeu est remporté par le premier joueur ayant remporté 4 points consécutifs et au moins 2 points de plus que son adversaire
+* Le jeu est remporté par le premier joueur ayant remporté 4 points et au moins 2 points de plus que son adversaire
 * Si les deux joueurs sont à 40, alors ils sont à "_égalité_"
 * Si les deux joueurs sont à égalité, alors le gagnant du point suivant obtient un "_avantage_"
 * Si un joueur a l'avantage et gagne le point, alors il remporte le jeu
@@ -335,7 +335,7 @@ Par exemple pour l'expression arithmétique `MMMXL` + `XII` - `CIX` passée en p
 
 Afin de vérifier votre code, vous pouvez écrire quelques tests unitaires dans une nouvelle classe de test (par ex. `RomanAdditionnerTest` dans le paquetage `fr.umontpellier.iut.exercice4`).
 
-### Et ce n'est pas fini !
+## Et ce n'est pas fini !
 
 Vous trouverez d'autres katas qui vous permettront de mieux apprendre la programmation en mode TDD : http://codingdojo.org/kata/
 
