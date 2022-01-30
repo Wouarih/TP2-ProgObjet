@@ -16,6 +16,7 @@ public class Tennis {
     }
 
     // Retourne le score courant de la partie sous forme de chaîne de caractères
+    // Cette fonction interprète le score actuel sous forme d'un texte respectant la nomenclature d'un jeu de tennis
     public String getScore() {
         throw new RuntimeException("La fonction n'est pas encore implémentée !");
     }
