@@ -2,12 +2,12 @@ stages:
     - build
     - test
 
-build:
+compilation:
     stage: build
     script:
-        - echo "Build du projet"
-        - mvn clean
-test:
+        - echo "Compilation du projet"
+        - mvn compile
+testing:
     stage: test
     script:
         - echo "Vérification si les tests actifs passent"
