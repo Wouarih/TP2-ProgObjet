@@ -30,7 +30,7 @@ la documentation intégrée, le debuggage, une bonne intégration de Git, GitLab
 Dans ce cours nous utiliserons l'IDE **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** de chez **[JetBrains](https://www.jetbrains.com)**. Il devrait vous faciliter la vie au quotidien dans la réalisation de vos TP.
 Bien évidement, rien ne vous empêche d'en utiliser un autre ([Eclipse](https://www.eclipse.org/), [NetBeans](https://netbeans.org/) etc.).
 
-Votre fork de ce TP (_tp2-votre-login_) a été créé dans votre sous-groupe dans [Dev-Objets](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets). Vous pouvez d'ores et déjà le cloner localement sur votre machine dans votre répertoire de travail. Vous pouvez également attendre et le faire à travers l'IDE (voir ci-dessous).
+Votre fork de ce TP (_votre-login/tp2_) a été créé dans votre sous-groupe dans [Dev-Objets](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets). Vous pouvez d'ores et déjà le cloner localement sur votre machine dans votre répertoire de travail. Vous pouvez également attendre et le faire à travers l'IDE (voir ci-dessous).
 
 ### Premiers pas avec l'IDE
 
