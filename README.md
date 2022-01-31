@@ -40,7 +40,7 @@ IntelliJ IDEA possède deux versions, la première dite *'Communautaire'* est to
 * Si vous êtes au département, sur les postes Linux vous trouverez l'installation dans `/opt/idea-Ultimate/`. Pour le lancer :
 
     ```
-    ~/RepertoireCourant$  cd /opt/ide-Ultimate/bin
+    ~/RepertoireCourant$  cd /opt/idea-Ultimate/bin
     /opt/idea-Ultimate/bin$  ./idea.sh
     ```
 
