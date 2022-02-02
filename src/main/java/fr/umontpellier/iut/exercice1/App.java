@@ -3,7 +3,12 @@ package fr.umontpellier.iut.exercice1;
 public class App {
 
     public static void main(String[] args) {
-        throw new RuntimeException("La fonction n'est pas encore implémentée !");
-    }
 
+        FizzBuzz fb1;
+        fb1 = new FizzBuzz();
+
+        System.out.println(fb1.computeList(40));
+        System.out.println(fb1.getValue(3));
+
+    }
 }

@@ -3,10 +3,27 @@ package fr.umontpellier.iut.exercice1;
 public class FizzBuzz {
 
     public String getValue(int i) {
-        throw new RuntimeException("La fonction n'est pas encore implémentée !");
-    }
+        String a = null;
 
+            if(i % 3 == 0 && i % 5 ==0){
+                a ="FizzBuzz";
+            }
+            else if(i % 5 == 0){
+                a = "Buzz";
+            }
+            else if(i % 3 == 0){
+                a ="Fizz";
+            } else {
+                a = i + "";
+            }
+
+        return a;
+    }
     public String[] computeList(int i) {
-        throw new RuntimeException("La fonction n'est pas encore implémentée !");
+        String[] fb = new String[i];
+        for(int n = 0; n < i; n++){
+            fb[n] = getValue(n+1);
+        }
+        return fb;
     }
 }
