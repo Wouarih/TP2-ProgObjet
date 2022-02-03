@@ -91,4 +91,14 @@ class PrimeFactorsTest {
         assertEquals(list(2, 3, 3, 3, 7, 11), primeFactors.computeFactors(4158));
     }
 
+    @Test
+    public void eight_thousand_three_hundred_twenty_six_should_give_2_23_181() {
+        assertEquals(list(2, 23, 181), primeFactors.computeFactors(8326));
+    }
+
+    @Test
+    public void thirty_thousand_forty_five_should_give_3_5_2003() {
+        assertEquals(list(3, 5, 2003), primeFactors.computeFactors(30045));
+    }
+
 }
