@@ -85,7 +85,7 @@ class PrimeFactorsTest {
         assertEquals(list(2, 5), primeFactors.computeFactors(10));
     }
 
-    @Disabled
+
     @Test
     public void four_thousand_one_hundred_fifty_eight_should_give_2_3_3_3_7_11() {
         assertEquals(list(2, 3, 3, 3, 7, 11), primeFactors.computeFactors(4158));
