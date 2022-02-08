@@ -23,6 +23,24 @@ public class Tennis {
     // Retourne le score courant de la partie sous forme de chaîne de caractères
     // Cette fonction interprète le score actuel sous forme d'un texte respectant la nomenclature d'un jeu de tennis
     public String getScore() {
+
+        if(nbPointsJ1 == 4 && nbPointsJ2 ==3){
+            return "Avantage Federer";
+        }
+        if(nbPointsJ1 >= 4 || nbPointsJ2 == nbPointsJ1 -2 && nbPointsJ2 >=3) {
+            return "Federer gagne";
+        }
+
+        if(nbPointsJ1 == 3 && nbPointsJ2 ==4){
+            return "Avantage Nadal";
+        }
+        if(nbPointsJ1 >= 3 && nbPointsJ2 >= 3){
+            return "Égalité";
+        }
+
+        if(nbPointsJ2 ==4){
+            return "Nadal gagne";
+        }
         if(nbPointsJ1 == 0 && nbPointsJ2 == 3){
             return "0 : 40";
         }

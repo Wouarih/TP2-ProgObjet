@@ -51,7 +51,7 @@ class TennisTest {
         assertEquals("0 : 40", score);
     }
 
-    @Disabled
+
     @Test
     public void test_premier_joueur_gagne() {
         jeu = new Tennis(j1, j2);
@@ -61,7 +61,7 @@ class TennisTest {
         assertEquals("Federer gagne", score);
     }
 
-    @Disabled
+
     @Test
     public void test_deuxieme_joueur_gagne() {
         marquerPoints(1, 4);
@@ -70,7 +70,7 @@ class TennisTest {
         assertEquals("Nadal gagne", score);
     }
 
-    @Disabled
+
     @Test
     public void test_joueurs_a_egalite() {
         jeu = new Tennis(j1, j2);
@@ -80,7 +80,7 @@ class TennisTest {
         assertEquals("Égalité", score);
     }
 
-    @Disabled
+
     @Test
     public void test_joueurs_a_egalite2() {
         marquerPoints(4, 4);
@@ -89,7 +89,7 @@ class TennisTest {
         assertEquals("Égalité", score);
     }
 
-    @Disabled
+
     @Test
     public void test_avantage_joueur_1() {
         marquerPoints(4, 3);
@@ -98,7 +98,7 @@ class TennisTest {
         assertEquals("Avantage Federer", score);
     }
 
-    @Disabled
+
     @Test
     public void test_avantage_joueur_2() {
         marquerPoints(3, 4);
@@ -107,7 +107,7 @@ class TennisTest {
         assertEquals("Avantage Nadal", score);
     }
 
-    @Disabled
+
     @Test
     public void test_joueur_1_gagne_apres_avantage() {
         marquerPoints(5, 3);
