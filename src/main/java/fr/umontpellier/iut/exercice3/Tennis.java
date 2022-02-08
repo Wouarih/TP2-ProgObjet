@@ -13,13 +13,50 @@ public class Tennis {
 
     // incrémente les points du joueur correspondant
     public void gagnerPoint(String joueur) {
-        throw new RuntimeException("La fonction n'est pas encore implémentée !");
+
+        if (joueur.equals(j1)) {
+            nbPointsJ1++;
+        } else {
+            nbPointsJ2++;
+        }
     }
 
     // Retourne le score courant de la partie sous forme de chaîne de caractères
     // Cette fonction interprète le score actuel sous forme d'un texte respectant la nomenclature d'un jeu de tennis
     public String getScore() {
-        throw new RuntimeException("La fonction n'est pas encore implémentée !");
-    }
+        String score = "0 : 0";
 
+        if (nbPointsJ1 == 1) {
+            score = "15 : 0";
+        }
+
+        if (nbPointsJ2 == 1) {
+            score = "15 : 15";
+        }
+        if (nbPointsJ2 == 3 && nbPointsJ1 == 0) {
+            score = "0 : 40";
+        }
+
+        if (nbPointsJ1 >= 4 && nbPointsJ1 >= nbPointsJ2 + 2) {
+            score = j1 + " gagne";
+        }
+
+        if (nbPointsJ2 >= 4 && nbPointsJ2 >= nbPointsJ1 + 2) {
+            score = j2 + " gagne";
+        }
+
+        if (nbPointsJ1 >= 3 && nbPointsJ1 == nbPointsJ2) {
+            score = "Égalité";
+        }
+
+        if (nbPointsJ1 >= 4 && nbPointsJ2 == nbPointsJ1 - 1) {
+            score = "Avantage " + j1;
+        }
+        if (nbPointsJ2 >= 4 && nbPointsJ1 == nbPointsJ2 - 1) {
+            score = "Avantage " + j2;
+        }
+
+        return score;
+    }
 }
+
