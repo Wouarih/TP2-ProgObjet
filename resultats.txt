@@ -1,0 +1,79 @@
+fr.umontpellier.iut.exercice1.FizzBuzzTest
+  ✓ test_fifteen_should_print_fizzbuzz
+  ✓ test_six_should_print_fizz
+  ✓ test_one_should_print_one
+  ✓ test_ten_should_print_buzz
+  ✓ test_getList_Should_Return_a_sequence_of_5_FizzBuzz_elements_when_5
+  ✓ test_four_should_print_four
+  ✓ test_twelve_should_print_fizz
+  ✓ test_three_should_print_fizz
+  ✓ test_nine_should_print_fizz
+  ✓ test_five_should_print_buzz
+  ✓ test_two_should_print_two
+fr.umontpellier.iut.exercice2.PrimeFactorsTest
+  ✓ one_should_give_empty
+  ✓ five_should_give_5
+  ✓ nine_should_give_3
+  ✓ six_should_give_2_and_3
+  ✓ two_should_give_2
+  ✓ three_should_give_3
+  ✓ four_thousand_one_hundred_fifty_eight_should_give_2_3_3_3_7_11
+  ✓ eight_should_give_2
+  ✓ four_should_give_2_and_2
+  ✓ ten_should_give_10
+  ✓ seven_should_give_7
+fr.umontpellier.iut.exercice3.TennisTest
+  ✓ test_15_partout
+  ✓ test_deuxieme_joueur_gagne
+  ✓ test_premier_joueur_gagne
+  ✓ test_joueur_1_gagne_apres_avantage
+  ✓ test_joueurs_a_egalite
+  ✓ test_avantage_joueur_1
+  ✓ test_avantage_joueur_2
+  ✓ test_joueurs_a_egalite2
+  ✓ test_joueur_2_gagne_apres_avantage
+  ✓ test_premier_joueur_remporte_le_premier_point
+  ✓ test_nouveau_jeu_doit_retourner_zero_partout
+  ✓ test_deuxieme_joueur_gagne_trois_points_daffilee
+fr.umontpellier.iut.exercice4.NumeralToRomanTest
+  ✗ five_should_give_V
+  ✗ XI_should_give_11
+  ✗ six_should_give_VI
+  ✗ hundred_should_give_C
+  ✗ ten_should_give_X
+  ✗ two_should_give_II
+  ✗ MLXVI_should_give_1066
+  ✗ three_should_give_III
+  ✗ one_should_give_I
+  ✗ four_should_give_IV
+  ✗ fifty_should_give_L
+  ✗ thousand_should_give_M
+  ✗ eight_should_give_VIII
+  ✗ fivehundred_should_give_D
+  ✗ nine_should_give_IX
+  ✗ seven_should_give_VII
+fr.umontpellier.iut.exercice4.RomanToNumeralTest
+  ✗ L_should_give_50
+  ✗ XI_should_give_11
+  ✗ II_should_give_2
+  ✗ III_should_give_3
+  ✗ VIII_should_give_8
+  ✗ D_should_give_500
+  ✗ VII_should_give_7
+  ✗ AllNumbersToOneThousand
+  ✗ V_should_give_5
+  ✗ IX_should_give_9
+  ✗ CM_should_give_900
+  ✗ VI_should_give_6
+  ✗ X_should_give_10
+  ✗ CD_should_give_400
+  ✗ XLIX_should_give_49
+  ✗ M_should_give_1000
+  ✗ IV_should_give_4
+  ✗ XCIX_should_give_99
+  ✗ XL_should_give_40
+  ✗ I_should_give_1
+  ✗ XC_should_give_90
+  ✗ C_should_give_100
+
+34 / 72 tests réussis
